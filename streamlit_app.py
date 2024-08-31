@@ -3,13 +3,12 @@ import sklearn
 import pickle
 import pandas as pd
 # Cabeçalho
-st.image("images/logo.PNG")
+st.image("images/logo-RS-01.PNG")
 st.title("Telecom CHURN")
 st.info('Objetivo: prever a rotatividade(probabilidade de cancelar o contrato) de um cliente na operadora utilizando dados históricos de custos de ligações efetuadas no período, total de ligações ao call center,estado,código de área entre outras informações.',icon="ℹ️")
 # Carregando bases de dados principais
 try:
     cli_contratos_abt = pd.read_csv("bases/abt_contratos_clientes.csv")
-
     # Será usada para tratamento de algumas variáveis
     previsoes = pd.read_csv("bases/cli_contratos_previsoes_final.csv")
 except Exception as excecao:
@@ -17,17 +16,14 @@ except Exception as excecao:
     st.markdown("Não é possível prosseguir com a aplicação. Contrate o administrador.")
 else:
     st.markdown("Base de dados carregada.")
-    
     # Carregando modelo preditivo
     try:
         with open('code/modelagem/random_forest_modelo_v1.pkl', 'rb') as f:
             random_forest_modelo_carregado = pickle.load(f)
     except Exception as excecao:
-        st.markdown(excecao)
-        #st.markdown("Erro ao carregar o modelo preditivo")
+        st.markdown("Erro ao carregar o modelo preditivo")
     else:
         st.markdown("Modelo carregado.")    
-
     # Preenchimentos de campos
     st.header("Cadastro")
 
