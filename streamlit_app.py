@@ -3,7 +3,6 @@ import sklearn
 import pickle
 import pandas as pd
 # Cabeçalho
-st.image("images/logo-RS-01.PNG")
 st.title("Telecom CHURN")
 st.info('Objetivo: prever a rotatividade(probabilidade de cancelar o contrato) de um cliente na operadora utilizando dados históricos de custos de ligações efetuadas no período, total de ligações ao call center,estado,código de área entre outras informações.',icon="ℹ️")
 # Carregando bases de dados principais
