@@ -4,7 +4,8 @@ import pickle
 import pandas as pd
 # Cabeçalho
 st.title("Telecom CHURN")
-st.info('Objetivo: prever a rotatividade(probabilidade de cancelar o contrato) de um cliente na operadora utilizando dados históricos de custos de ligações efetuadas no período, total de ligações ao call center,estado,código de área entre outras informações.',icon="ℹ️")
+st.info('Produzido por Cientista de Dados Roger C. Sampaio, rogersampaioo@gmail.com, www.rogersampaio.com')
+st.info('Objetivo: prever a rotatividade(probabilidade de cancelar o contrato) de um cliente na operadora utilizando dados históricos de ligações, característica de localidade, informações de call-center e plano contratado.',icon="ℹ️")
 # Carregando bases de dados principais
 try:
     cli_contratos_abt = pd.read_csv("bases/abt_contratos_clientes.csv")
