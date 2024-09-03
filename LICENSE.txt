@@ -1,0 +1,6 @@
+Sampaio`s Licença.
+
+Copyright (c) 2020-2024 Roger C. Sampaio.
+
+O software deve ser utilizado apenas para fins de estudos e experimentação, sendo vendado a venda.
+
